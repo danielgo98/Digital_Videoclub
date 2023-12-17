@@ -163,15 +163,14 @@ insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 ('Jujutsu Kaisen', 'https://pics.filmaffinity.com/Jujutsu_Kaisen_Serie_de_TV-665660213-large.jpg', 2, '2020/10/03', 
-'
-"Yuji Itadori, estudiante con habilidades ocultas, se embarca en una lucha contra maldiciones tras encontrar objetos malditos. Con sus amigos, enfrenta a seres oscuros en batallas llenas de magia y acción en "Jujutsu Kaisen"');
+'"Yuji Itadori, estudiante con habilidades ocultas, se embarca en una lucha contra maldiciones tras encontrar objetos malditos. Con sus amigos, enfrenta a seres oscuros en batallas llenas de magia y acción en "Jujutsu Kaisen"');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Dragon Ball', 'https://pics.filmaffinity.com/doragon_boru_dragon_ball-973171538-mmed.jpg', 4, '1986/02/26', 
+('Dragon Ball', 'https://pics.filmaffinity.com/doragon_boru_dragon_ball-973171538-mmed.jpg', 5, '1986/02/26', 
 'Goku busca las Esferas del Dragón para lograr deseos. Aventuras épicas, combates y amistades se entrelazan en esta serie llena de acción y crecimiento personal.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Dragon Ball Z', 'https://pics.filmaffinity.com/Dragon_Ball_Z_Serie_de_TV-697937148-large.jpg', 4, '1989/04/26',
+('Dragon Ball Z', 'https://pics.filmaffinity.com/Dragon_Ball_Z_Serie_de_TV-697937148-large.jpg', 5, '1989/04/26',
 'Dragon Ball Z sigue las épicas batallas de Goku y sus amigos contra poderosos enemigos que amenazan la Tierra. Con habilidades mejoradas y nuevos desafíos, la serie explora la lucha entre el bien y el mal en un universo lleno de acción y aventuras.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
@@ -217,3 +216,43 @@ insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(8, 10);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(9, 10);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(10, 9);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(11, 1);
+
+-- SEASONS
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga del East Blue', 61, '1999/10/20', 1, 'https://www.youtube.com/watch?v=3_GLuHP6fv4');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Arabasta', 69, '2001/03/21', 1, 'https://www.youtube.com/watch?app=desktop&v=fU6S_p-Krms');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Skypeia', 62, '2003/02/02', 1,'https://www.youtube.com/watch?v=CEIQxmDkrAM');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Water 7', 118, '2004/06/20', 1,'https://www.youtube.com/watch?v=0wwsW577y6c');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Thriller Bark', 59, '2007/12/23', 1, 'https://www.youtube.com/watch?v=yix-zjwX7FA');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Arco de Marineford', 132, '2009/01/18', 1, 'https://www.youtube.com/watch?v=d9sExxWlDkA');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de la isla Gyojin', 57, '2011/10/02', 1, 'https://www.youtube.com/watch?v=lCOXf4rYKlI');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Dressrossa', 172, '2013/01/06', 1, 'https://www.youtube.com/watch?v=v751miQLykU');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de los cuatro emperadores', 339, '2016/06/26', 'https://www.youtube.com/watch?v=6doncQV-jUI');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 1', 10, '2011/04/17', 2, 'https://www.youtube.com/watch?v=GkvDHqzDz-w');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 2', 10, '2012/04/01', 2, 'https://www.youtube.com/watch?v=spzf-ihXpX4');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 3', 10, '2013/03/31', 2, 'https://www.youtube.com/watch?v=rw_QIbi40zU');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 4', 10, '2014/04/06', 2, 'https://www.youtube.com/watch?v=QeuBq0qpNrQ');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 5', 10, '2015/04/12', 2, 'https://www.youtube.com/watch?v=KqYJKqUuVOI');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 6', 10, '2016/04/24', 2, 'https://www.youtube.com/watch?v=l8tUY14C5cE');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 7', 7, '2017/07/16', 2, 'https://www.youtube.com/watch?v=f-rlcVEH-Y4');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 8', 6, '1019/04/14', 2, 'https://www.youtube.com/watch?v=EhuKM_mcGhA');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 1', 24, '2020/10/03', 3, 'https://www.youtube.com/watch?v=aPBUUJbrAWo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 2', 23, '2023/07/06', 3, 'https://www.youtube.com/watch?v=a70_eOnIS3o');
