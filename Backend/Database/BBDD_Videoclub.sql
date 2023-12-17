@@ -12,7 +12,7 @@ USER_NAME varchar(40) not null unique
 create table CATEGORIES(
 ID_CATEGORY int primary key auto_increment,
 CATEGORY varchar(40) not null unique
-);
+)engine=innodb;
 
 create table MOVIES(
 ID_MOVIE int primary key auto_increment,
@@ -28,14 +28,14 @@ create table MOVIE_CATEGORY(
 ID_MOVIE int,
 ID_CATEGORY int,
 primary key(ID_MOVIE, ID_CATEGORY)
-);
+)engine=innodb;
 
 create table SERIES(
 ID_SERIE int primary key auto_increment,
 TITLE varchar(40) not null unique,
 IMAGE varchar(255) not null unique,
-NUMBER_SEASONS int not null unique,
-RELEASE_DATE date not null unique,
+NUMBER_SEASONS int not null,
+RELEASE_DATE date not null,
 SYNOPSIS varchar(255) not null unique
 )engine=innodb;
 
@@ -43,7 +43,7 @@ create table SERIE_CATEGORY(
 ID_SERIE int,
 ID_CATEGORY int,
 primary key(ID_SERIE, ID_CATEGORY)
-);
+)engine=innodb;
 
 create table SEASONS(
 ID_SEASON int primary key auto_increment,
@@ -52,7 +52,7 @@ CHAPTERS int(4) not null,
 RELEASE_DATE date not null,
 SERIE_ID int not null,
 TRAILER varchar(255) not null
-);
+)engine=innodb;
 
 alter table MOVIE_CATEGORY
 add constraint FK_CATEGORY_MOVIE_MOVIE foreign key(ID_MOVIE) references MOVIES(ID_MOVIE),
@@ -76,6 +76,7 @@ insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Infantil');
 insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Suspense');
 insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Aventura');
 insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Comedia');
+insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Drama');
 
 -- MOVIES
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
@@ -150,3 +151,69 @@ insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (11, 1);
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (11, 4);
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (12, 5);
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (12, 8);
+
+-- series
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('One piece', 'https://pics.filmaffinity.com/One_Piece_Serie_de_TV-647985949-large.jpg', 9, '1999/10/20', 
+'Luffy busca ser el Rey de los Piratas con su tripulación, persiguiendo el tesoro legendario, el One Piece. Aventuras, poderes y desafíos épicos les esperan en mares peligrosos y encuentros memorables en este emocionante anime lleno de camaradería');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Juego de tronos', 'https://pics.filmaffinity.com/game_of_thrones-293142110-mmed.jpg', 8, '2011/04/17',
+'En Westeros, casas nobles compiten por el Trono de Hierro mientras enfrentan intrigas y traiciones. Amenazas sobrenaturales se suman al conflicto, desencadenando eventos que alterarán los Siete Reinos en la épica serie "Juego de Tronos".');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Jujutsu Kaisen', 'https://pics.filmaffinity.com/Jujutsu_Kaisen_Serie_de_TV-665660213-large.jpg', 2, '2020/10/03', 
+'
+"Yuji Itadori, estudiante con habilidades ocultas, se embarca en una lucha contra maldiciones tras encontrar objetos malditos. Con sus amigos, enfrenta a seres oscuros en batallas llenas de magia y acción en "Jujutsu Kaisen"');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Dragon Ball', 'https://pics.filmaffinity.com/doragon_boru_dragon_ball-973171538-mmed.jpg', 4, '1986/02/26', 
+'Goku busca las Esferas del Dragón para lograr deseos. Aventuras épicas, combates y amistades se entrelazan en esta serie llena de acción y crecimiento personal.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Dragon Ball Z', 'https://pics.filmaffinity.com/Dragon_Ball_Z_Serie_de_TV-697937148-large.jpg', 4, '1989/04/26',
+'Dragon Ball Z sigue las épicas batallas de Goku y sus amigos contra poderosos enemigos que amenazan la Tierra. Con habilidades mejoradas y nuevos desafíos, la serie explora la lucha entre el bien y el mal en un universo lleno de acción y aventuras.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Dragon Ball Super', 'https://pics.filmaffinity.com/Dragon_Ball_Super_Serie_de_TV-965587763-large.jpg', 4,'2015/07/05',
+'Goku y sus amigos enfrentan desafíos cósmicos y enemigos poderosos en "Dragon Ball Super", explorando nuevas dimensiones de poder y amistad en la saga épica.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('My hero academia', 'https://pics.filmaffinity.com/My_Hero_Academia_Serie_de_TV-206305193-large.jpg', 7, '2016/04/03', 
+'Izuku Midoriya sin superpoderes sueña con ser un héroe. Tras heredar poderes, ingresa a la U.A. High School para entrenar y enfrentar villanos en "My Hero Academia".');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Breaking bad', 'https://pics.filmaffinity.com/breaking_bad-504442815-mmed.jpg', 5, '2008/05/20', 
+'"Walter White, profesor con cáncer, se convierte en fabricante de metanfetaminas para asegurar el futuro familiar en "Breaking Bad", desencadenando consecuencias y dilemas morales.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Cobra Kai', 'https://pics.filmaffinity.com/cobra_kai-773106365-mmed.jpg', 5, '2018/05/02', 
+'"En "Cobra Kai", la rivalidad resurge entre Johnny y Daniel, desencadenando conflictos y lecciones de karate que afectan a una nueva generación.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Aqui no hay quien viva', 'https://pics.filmaffinity.com/aqui_no_hay_quien_viva-150319925-mmed.jpg', 5, '2003/11/03', 
+'"Aquí no hay quien viva" sigue las divertidas situaciones y relaciones de los variopintos vecinos de un edificio residencial, explorando el humor y las peculiaridades de la vida comunitaria en un tono cómico y ameno.');
+
+insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
+('Aguila roja', 'https://pics.filmaffinity.com/aAguila_Roja_Serie_de_TV-618857687-large.jpg', 9, '2009/02/07', 
+'Gonzalo, un maestro en el siglo XVII, se convierte en el héroe enmascarado Águila Roja. Combate la injusticia y protege a los débiles, enfrentándose a intrigas y desafíos mientras mantiene su identidad oculta.');
+
+-- SERIES_CATEGORY
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(1, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(1, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(2, 10);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(2, 5);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(3, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(3, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(4, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(4, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(5, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(5, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(6, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(6, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(7, 3);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(7, 8);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(8, 10);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(9, 10);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(10, 9);
+insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(11, 1);
