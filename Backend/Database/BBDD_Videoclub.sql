@@ -65,18 +65,18 @@ add constraint FK_CATEGORY_SERIE_CATEGORY foreign key(ID_CATEGORY) references CA
 alter table SEASONS
 add constraint FK_SEASON_SERIE foreign key (SERIE_ID) references SERIES(ID_SERIE);
 
--- INSERTS
+-- INSERTS EN LAS TABLAS
 -- CATEGORIES
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (1, 'Accion');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Animacion');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Anime');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Ciencia Ficcion');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Fantasia');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Infantil');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Suspense');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Aventura');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Comedia');
-insert into CATEGORIES(ID_CATEGORY, CATEGORY) values (null, 'Drama');
+insert into CATEGORIES(CATEGORY) values ('Accion');
+insert into CATEGORIES(CATEGORY) values ('Animacion');
+insert into CATEGORIES(CATEGORY) values ('Anime');
+insert into CATEGORIES(CATEGORY) values ('Ciencia Ficcion');
+insert into CATEGORIES(CATEGORY) values ('Fantasia');
+insert into CATEGORIES(CATEGORY) values ('Infantil');
+insert into CATEGORIES(CATEGORY) values ('Suspense');
+insert into CATEGORIES(CATEGORY) values ('Aventura');
+insert into CATEGORIES(CATEGORY) values ('Comedia');
+insert into CATEGORIES(CATEGORY) values ('Drama');
 
 -- MOVIES
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
@@ -152,7 +152,7 @@ insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (11, 4);
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (12, 5);
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (12, 8);
 
--- series
+-- SERIES
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 ('One piece', 'https://pics.filmaffinity.com/One_Piece_Serie_de_TV-647985949-large.jpg', 9, '1999/10/20', 
 'Luffy busca ser el Rey de los Piratas con su tripulación, persiguiendo el tesoro legendario, el One Piece. Aventuras, poderes y desafíos épicos les esperan en mares peligrosos y encuentros memorables en este emocionante anime lleno de camaradería');
@@ -166,7 +166,7 @@ insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 '"Yuji Itadori, estudiante con habilidades ocultas, se embarca en una lucha contra maldiciones tras encontrar objetos malditos. Con sus amigos, enfrenta a seres oscuros en batallas llenas de magia y acción en "Jujutsu Kaisen"');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Dragon Ball', 'https://pics.filmaffinity.com/doragon_boru_dragon_ball-973171538-mmed.jpg', 5, '1986/02/26', 
+('Dragon Ball', 'https://pics.filmaffinity.com/doragon_boru_dragon_ball-973171538-mmed.jpg', 7, '1986/02/26', 
 'Goku busca las Esferas del Dragón para lograr deseos. Aventuras épicas, combates y amistades se entrelazan en esta serie llena de acción y crecimiento personal.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
@@ -174,11 +174,11 @@ insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 'Dragon Ball Z sigue las épicas batallas de Goku y sus amigos contra poderosos enemigos que amenazan la Tierra. Con habilidades mejoradas y nuevos desafíos, la serie explora la lucha entre el bien y el mal en un universo lleno de acción y aventuras.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Dragon Ball Super', 'https://pics.filmaffinity.com/Dragon_Ball_Super_Serie_de_TV-965587763-large.jpg', 4,'2015/07/05',
+('Dragon Ball Super', 'https://pics.filmaffinity.com/Dragon_Ball_Super_Serie_de_TV-965587763-large.jpg', 5,'2015/07/05',
 'Goku y sus amigos enfrentan desafíos cósmicos y enemigos poderosos en "Dragon Ball Super", explorando nuevas dimensiones de poder y amistad en la saga épica.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('My hero academia', 'https://pics.filmaffinity.com/My_Hero_Academia_Serie_de_TV-206305193-large.jpg', 7, '2016/04/03', 
+('My hero academia', 'https://pics.filmaffinity.com/My_Hero_Academia_Serie_de_TV-206305193-large.jpg', 6, '2016/04/03', 
 'Izuku Midoriya sin superpoderes sueña con ser un héroe. Tras heredar poderes, ingresa a la U.A. High School para entrenar y enfrentar villanos en "My Hero Academia".');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
@@ -189,15 +189,7 @@ insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 ('Cobra Kai', 'https://pics.filmaffinity.com/cobra_kai-773106365-mmed.jpg', 5, '2018/05/02', 
 '"En "Cobra Kai", la rivalidad resurge entre Johnny y Daniel, desencadenando conflictos y lecciones de karate que afectan a una nueva generación.');
 
-insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Aqui no hay quien viva', 'https://pics.filmaffinity.com/aqui_no_hay_quien_viva-150319925-mmed.jpg', 5, '2003/11/03', 
-'"Aquí no hay quien viva" sigue las divertidas situaciones y relaciones de los variopintos vecinos de un edificio residencial, explorando el humor y las peculiaridades de la vida comunitaria en un tono cómico y ameno.');
-
-insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Aguila roja', 'https://pics.filmaffinity.com/aAguila_Roja_Serie_de_TV-618857687-large.jpg', 9, '2009/02/07', 
-'Gonzalo, un maestro en el siglo XVII, se convierte en el héroe enmascarado Águila Roja. Combate la injusticia y protege a los débiles, enfrentándose a intrigas y desafíos mientras mantiene su identidad oculta.');
-
--- SERIES_CATEGORY
+-- SERIE_CATEGORY
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(1, 3);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(1, 8);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(2, 10);
@@ -214,28 +206,26 @@ insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(7, 3);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(7, 8);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(8, 10);
 insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(9, 10);
-insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(10, 9);
-insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(11, 1);
 
 -- SEASONS
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga del East Blue', 61, '1999/10/20', 1, 'https://www.youtube.com/watch?v=3_GLuHP6fv4');
+('Saga del East Blue', 61, '1999/10/20', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Arabasta', 69, '2001/03/21', 1, 'https://www.youtube.com/watch?app=desktop&v=fU6S_p-Krms');
+('Saga de Arabasta', 69, '2001/03/21', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Skypeia', 62, '2003/02/02', 1,'https://www.youtube.com/watch?v=CEIQxmDkrAM');
+('Saga de Skypeia', 62, '2003/02/02', 1,'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Water 7', 118, '2004/06/20', 1,'https://www.youtube.com/watch?v=0wwsW577y6c');
+('Saga de Water 7', 118, '2004/06/20', 1,'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Thriller Bark', 59, '2007/12/23', 1, 'https://www.youtube.com/watch?v=yix-zjwX7FA');
+('Saga de Thriller Bark', 59, '2007/12/23', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Arco de Marineford', 132, '2009/01/18', 1, 'https://www.youtube.com/watch?v=d9sExxWlDkA');
+('Arco de Marineford', 132, '2009/01/18', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de la isla Gyojin', 57, '2011/10/02', 1, 'https://www.youtube.com/watch?v=lCOXf4rYKlI');
+('Saga de la isla Gyojin', 57, '2011/10/02', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Dressrossa', 172, '2013/01/06', 1, 'https://www.youtube.com/watch?v=v751miQLykU');
+('Saga de Dressrossa', 172, '2013/01/06', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de los cuatro emperadores', 339, '2016/06/26', 'https://www.youtube.com/watch?v=6doncQV-jUI');
+('Saga de los cuatro emperadores', 339, '2016/06/26', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
 ('Temporada 1', 10, '2011/04/17', 2, 'https://www.youtube.com/watch?v=GkvDHqzDz-w');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
@@ -253,6 +243,70 @@ insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) valu
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
 ('Temporada 8', 6, '1019/04/14', 2, 'https://www.youtube.com/watch?v=EhuKM_mcGhA');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 1', 24, '2020/10/03', 3, 'https://www.youtube.com/watch?v=aPBUUJbrAWo');
+('Season 1', 24, '2020/10/03', 3, 'https://www.youtube.com/watch?v=FqFQD-TZBnM');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 2', 23, '2023/07/06', 3, 'https://www.youtube.com/watch?v=a70_eOnIS3o');
+('Season 2', 23, '2023/07/06', 3, 'https://www.youtube.com/watch?v=FqFQD-TZBnM');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Pilaf', 13, '1986/02/06', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('21° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 15, '1986/05/28', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga del Ejército del Lazo rojo (Red Ribbon)', 40, '1986/09/10', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('El Palacio de Uranai Baba', 14, '1987/07/08', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('22° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 19, '1987/10/14', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Piccolo', 31, '1988/04/24', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('23° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 21, '1988/11/09', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga Saiyan', 35, '1989/04/26', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Garlic jr', 10, '1991/09/11', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga Androide', 82, '1991/11/20', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Majin Buu', 92, '1993/09/08', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de la Batalla de los Dioses', 14, '2015/07/05', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de la Resurreccion de Freezer', 13, '2015/10/18', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga del Torneo de Champa', 19, '2016/01/24', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga de Trunks del Futuro', 30, '2016/06/12', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Saga del Torneo de Poder', 55, '2017/02/05', 6, 'https://www.youtube.com/watch?v=v460edZq2Uo');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 1', 13, '2016/04/03', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 2', 25, '2017/04/01', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 3', 25, '2018/04/07', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 4', 25, '2019/10/12', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 5', 25, '2021/03/21', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Season 6', 25, '2022/10/01', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 1', 7, '2008/01/20', 8, 'https://www.youtube.com/watch?v=V8WQhxHEmMc');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 2', 13, '2009/03/08', 8, 'https://www.youtube.com/watch?v=qqNrz_U7NRk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 3', 13, '2010/03/21', 8, 'https://www.youtube.com/watch?v=TggkQXwe0Vk');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 4', 13, '2011/07/17', 8, 'https://www.youtube.com/watch?v=sZFOyNFKPug');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 5', 16, '2012/07/15', 8, 'https://www.youtube.com/watch?v=_Z-PTJhf0Po');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 1', 10, '2018/05/02', 9, 'https://www.youtube.com/watch?v=CfOuYm8EnBA');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 2', 10, '2019/04/24', 9, 'https://www.youtube.com/watch?v=wbLyMWdNvzQ');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 3', 10, '2021/01/01', 9, 'https://www.youtube.com/watch?v=ZjUzMd6p4R8');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 4', 10, '2021/12/31', 9, 'https://www.youtube.com/watch?v=ZxWET9C2MYA');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 5', 10, '2022/09/09', 9, 'https://www.youtube.com/watch?v=NMdSs5NkiOg');
