@@ -6,7 +6,7 @@ create table LOGIN(
 ID_USUARIO int primary key auto_increment, 
 EMAIL varchar(50) not null unique,
 PASSWORD varchar(30) not null unique,
-USER_NAME varchar(40) not null unique
+USERNAME varchar(40) not null unique
 )engine=innodb;
 
 create table CATEGORIES(
