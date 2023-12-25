@@ -26,5 +26,9 @@ public class Category {
 	
 	@Column(name = "CATEGORY")
 	private String category;
+	
+	public Category(String category) {
+		this.category = category;
+	}
 
 }

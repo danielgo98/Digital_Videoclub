@@ -47,7 +47,7 @@ public class Serie implements Serializable{
 	@Column(name = "SYNOPSIS")
 	private String synopsis;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "SERIE_CATEGORY",
 			   joinColumns = @JoinColumn(name = "ID_SERIE"),
 			   inverseJoinColumns = @JoinColumn(name = "ID_CATEGORY"))
