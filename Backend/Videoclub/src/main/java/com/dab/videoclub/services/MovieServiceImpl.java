@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.dab.videoclub.entities.Category;
 import com.dab.videoclub.entities.Movie;
+import com.dab.videoclub.exceptions.CategoryNotFoundException;
 import com.dab.videoclub.repositories.CategoryRepository;
 import com.dab.videoclub.repositories.MovieRepository;
 
@@ -42,13 +43,24 @@ public class MovieServiceImpl implements MovieService{
 	}
 
 	@Override
-	public Movie save(Movie movie) {
-		List<Category> categories = movie.getCategories();
+	public Movie save(Movie movie) throws CategoryNotFoundException {
+		List<Category> categoriesMovie = movie.getCategories();
 		List<Category> managedCategories = new ArrayList<>();
 		
-		for(Category category: categories) {
-			Optional<Category> managedCategory = categoryRepository.findByCategory(category.getCategory());
-			managedCategories.add(managedCategory.get());
+		for(Category category: categoriesMovie) {
+			
+			
+			if (category != null) {
+				Optional<Category> managedCategory = categoryRepository.findByCategory(category.getCategory());
+
+				if (managedCategory.isPresent()) {
+					managedCategories.add(managedCategory.get());
+				}
+				
+			} else {
+				managedCategories.add(new Category(""));
+				throw new CategoryNotFoundException("La categoria de la pelicula que ha añadido no se encuentra en nuestra base de datos.");
+			}
 		}
 		
 		movie.setCategories(managedCategories);

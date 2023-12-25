@@ -23,19 +23,9 @@ public class CategoryServiceImpl implements CategoryService{
 	}
 
 	@Override
-	public Category findByCategoryOrCreate(String name) {	
-		Category category = null;
-		
-		Optional<Category> categoryOpt = categoryRepository.findByCategory(name);
-		
-		if(categoryOpt.isPresent()) {
-			category = categoryOpt.get();
-		}else {
-			category = new Category(name);
-			categoryRepository.save(category);
-		}
-		
-		return category;
+	public Category findByCategory(String name) {	
+		Optional<Category> category = categoryRepository.findByCategory(name);
+		return category.isPresent() ? category.get() : null;
 	}
 
 	@Override

@@ -14,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.dab.videoclub.entities.Category;
 import com.dab.videoclub.entities.Movie;
+import com.dab.videoclub.exceptions.CategoryNotFoundException;
 import com.dab.videoclub.services.CategoryService;
 import com.dab.videoclub.services.MovieService;
 
@@ -36,8 +37,8 @@ public class VideoclubApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Category catAccion = categoryService.findByCategoryOrCreate("Accion");
-		Category catDrama = categoryService.findByCategoryOrCreate("Drama");
+		Category catAccion = categoryService.findByCategory("Accion");
+		Category catDrama = categoryService.findByCategory("Drama");
 		
 		Movie movie = Movie.builder()
 				.title("Pelicula de ejemplo: parte 2")
@@ -52,7 +53,7 @@ public class VideoclubApplication implements CommandLineRunner{
 //		testFindById(1);
 //		testFindByName("Guardianes de la Galaxia");
 //		testCreateMovie(movie);
-		testDeleteMovie(17);
+		testDeleteMovie(13);
 	}
 	
 	private void testFindAllMovies() {
@@ -85,8 +86,12 @@ public class VideoclubApplication implements CommandLineRunner{
 	}
 	
 	private void testCreateMovie(Movie movie) {
-		movieService.save(movie);
-		System.out.println("Pelicula guardada");
+		try {
+			movieService.save(movie);
+			System.out.println("Pelicula guardada");
+		} catch (CategoryNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	private void testDeleteMovie(long id) {
