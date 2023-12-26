@@ -6,6 +6,7 @@ Technologies that im going to use to this project:
 - Java
 - Spring Framework
 - MySQL
+- Testing with JUnit and Mockito
 
 # FRONTEND
 - Angular
