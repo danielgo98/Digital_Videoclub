@@ -21,6 +21,8 @@ import lombok.Setter;
 @Table(name = "LOGIN")
 public class Login implements Serializable{
 	
+	private static final long serialVersionUID = 7913207961840068175L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_USUARIO")

@@ -13,15 +13,20 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "SEASONS")
 public class Season implements Serializable{
-	
+
+	private static final long serialVersionUID = 7059501155009068614L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_SEASON")
@@ -42,5 +47,13 @@ public class Season implements Serializable{
 	
 	@Column(name = "TRAILER")
 	private String trailer;
+
+	@Override
+	public String toString() {
+		return "Season [id=" + id + ", name=" + name + ", chapters=" + chapters + ", releaseDate=" + releaseDate
+				+ " , trailer=" + trailer + "]";
+	}
+	
+	
 
 }

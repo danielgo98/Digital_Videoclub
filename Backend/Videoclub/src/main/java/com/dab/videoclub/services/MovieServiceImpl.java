@@ -1,7 +1,7 @@
 package com.dab.videoclub.services;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +39,7 @@ public class MovieServiceImpl implements MovieService{
 	@Override
 	public List<Movie> findByTitle(String title) {
 		List<Movie> movies = movieRepository.findByTitle(title);
-		return movies.isEmpty() ? null : movies;
+		return movies.isEmpty() ? Collections.emptyList() : movies;
 	}
 
 	@Override
@@ -49,7 +49,6 @@ public class MovieServiceImpl implements MovieService{
 		
 		for(Category category: categoriesMovie) {
 			
-			
 			if (category != null) {
 				Optional<Category> managedCategory = categoryRepository.findByCategory(category.getCategory());
 
@@ -58,13 +57,11 @@ public class MovieServiceImpl implements MovieService{
 				}
 				
 			} else {
-				managedCategories.add(new Category(""));
 				throw new CategoryNotFoundException("La categoria de la pelicula que ha añadido no se encuentra en nuestra base de datos.");
 			}
 		}
 		
 		movie.setCategories(managedCategories);
-		
 		return movieRepository.save(movie);
 	}
 

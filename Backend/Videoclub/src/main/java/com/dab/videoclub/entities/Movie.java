@@ -28,6 +28,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "MOVIES")
 public class Movie implements Serializable{
 
+	private static final long serialVersionUID = 6658038879794070283L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_MOVIE")

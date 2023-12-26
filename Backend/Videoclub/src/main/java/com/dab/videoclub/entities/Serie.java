@@ -18,15 +18,20 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "SERIES")
 public class Serie implements Serializable{
-	
+
+	private static final long serialVersionUID = -1513802177901690712L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_SERIE")
@@ -56,8 +61,16 @@ public class Serie implements Serializable{
 	@OneToMany(mappedBy = "serie",
 			   cascade = CascadeType.ALL,
 			   orphanRemoval = true,
-			   fetch = FetchType.LAZY)
+			   fetch = FetchType.EAGER)
 	private List<Season> seasons;
-	
 
+	@Override
+	public String toString() {
+		return "Serie [id=" + id + ", title=" + title + ", image=" + image + ", numberSeasons=" + numberSeasons
+				+ ", releaseDate=" + releaseDate + ", synopsis=" + synopsis + ", categories=" + categories
+				+ ", seasons=" + seasons + "]";
+	}
+	
+	
+	
 }
