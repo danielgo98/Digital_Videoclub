@@ -10,7 +10,7 @@ import com.dab.videoclub.entities.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 	
-	@Query(value = "SELECT DISTINCT m FROM Movie m LEFT JOIN fetch m.categories c WHERE m.title = :title")
+	@Query(value = "SELECT m FROM Movie m LEFT JOIN fetch m.categories c WHERE m.title LIKE %:title%")
 	List<Movie> findByTitle(@Param("title") String name);
 
 }

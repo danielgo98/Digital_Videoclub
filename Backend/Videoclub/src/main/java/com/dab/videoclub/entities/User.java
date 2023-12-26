@@ -9,17 +9,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(name = "LOGIN")
-public class Login implements Serializable{
+@Table(name = "USERS")
+public class User implements Serializable{
 	
 	private static final long serialVersionUID = 7913207961840068175L;
 

@@ -2,7 +2,7 @@ create database videoclub;
 use videoclub;
 
 -- tablas
-create table LOGIN(
+create table USERS(
 ID_USUARIO int primary key auto_increment, 
 EMAIL varchar(50) not null unique,
 PASSWORD varchar(30) not null unique,

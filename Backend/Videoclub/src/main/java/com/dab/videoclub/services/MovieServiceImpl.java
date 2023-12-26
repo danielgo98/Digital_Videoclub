@@ -44,6 +44,7 @@ public class MovieServiceImpl implements MovieService{
 
 	@Override
 	public Movie save(Movie movie) throws CategoryNotFoundException {
+		
 		List<Category> categoriesMovie = movie.getCategories();
 		List<Category> managedCategories = new ArrayList<>();
 		

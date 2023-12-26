@@ -12,11 +12,13 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -47,13 +49,12 @@ public class Season implements Serializable{
 	
 	@Column(name = "TRAILER")
 	private String trailer;
+	
 
 	@Override
 	public String toString() {
 		return "Season [id=" + id + ", name=" + name + ", chapters=" + chapters + ", releaseDate=" + releaseDate
 				+ " , trailer=" + trailer + "]";
 	}
-	
-	
 
 }

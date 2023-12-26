@@ -1,0 +1,35 @@
+package com.dab.videoclub.dto;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import com.dab.videoclub.entities.Category;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class MovieDTO {
+	
+	private int id;
+	
+	private String title;
+	
+	private String image;
+	
+	private LocalDate releaseDate;
+	
+	private String synopsis;
+	
+	private String director;
+	
+	private String trailer;
+	
+	private List<Category> categories;
+
+}

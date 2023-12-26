@@ -11,15 +11,7 @@ import com.dab.videoclub.entities.Serie;
 
 public interface SerieRepository extends JpaRepository<Serie, Long> {
 	
-	@Query(value = "SELECT s, se, ca.category FROM Serie s "
-			+ "LEFT JOIN fetch s.seasons se "
-			+ "LEFT JOIN fetch s.categories ca WHERE s.id = :id")
-	Optional<Serie> findById(@Param("id") long id);
-
-	@Query(value = "SELECT s, c.category FROM Serie s LEFT JOIN fetch s.categories c WHERE s.title = :title")
+	@Query(value = "SELECT s FROM Serie s LEFT JOIN fetch s.categories c WHERE s.title LIKE %:title%")
 	List<Serie> findByName(@Param("title") String title);
-	
-	@Query(value = "SELECT s FROM Serie s LEFT JOIN fetch s.seasons se WHERE s.title = :title")
-	Serie findSerieWithSeasons(@Param("title") String title);
 	
 }
