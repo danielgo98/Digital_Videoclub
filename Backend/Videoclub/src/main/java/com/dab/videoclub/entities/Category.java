@@ -9,12 +9,15 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "CATEGORIES")
 public class Category {
@@ -29,6 +32,12 @@ public class Category {
 	
 	public Category(String category) {
 		this.category = category;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Category [category=" + category + "]";
 	}
 
 }

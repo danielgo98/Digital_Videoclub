@@ -62,6 +62,10 @@ public class MovieServiceImpl implements MovieService{
 			}
 		}
 		
+		if(managedCategories.isEmpty()) {
+			throw new CategoryNotFoundException("La categoria de la pelicula que ha añadido no se encuentra en nuestra base de datos.");
+		}
+		
 		movie.setCategories(managedCategories);
 		return movieRepository.save(movie);
 	}

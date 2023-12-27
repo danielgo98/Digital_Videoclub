@@ -29,7 +29,7 @@ public class SerieDTO {
 	
 	private String synopsis;
 	
-	private List<Category> categories;
+	private String[] categories;
 	
 	private List<Season> seasons;
 

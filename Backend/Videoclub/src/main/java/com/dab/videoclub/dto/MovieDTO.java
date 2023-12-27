@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class MovieDTO {
 	
-	private int id;
+	private Long id;
 	
 	private String title;
 	
@@ -30,6 +30,6 @@ public class MovieDTO {
 	
 	private String trailer;
 	
-	private List<Category> categories;
+	private String[] categories;
 
 }

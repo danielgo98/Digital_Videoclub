@@ -1,6 +1,10 @@
 package com.dab.videoclub.utils;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 import com.dab.videoclub.dto.MovieDTO;
+import com.dab.videoclub.entities.Category;
 import com.dab.videoclub.entities.Movie;
 
 public class MovieToMovieDTO {
@@ -15,7 +19,9 @@ public class MovieToMovieDTO {
 				.synopsis(movie.getSynopsis())
 				.director(movie.getDirector())
 				.trailer(movie.getTrailer())
-				.categories(movie.getCategories())
+				.categories(movie.getCategories().stream()
+						.map(Category::getCategory)
+						.toArray(String[]::new))
 				.build();
 		
 		return dto;
@@ -32,7 +38,9 @@ public class MovieToMovieDTO {
 				.synopsis(dto.getSynopsis())
 				.director(dto.getDirector())
 				.trailer(dto.getTrailer())
-				.categories(dto.getCategories())
+				.categories(Arrays.stream(dto.getCategories())
+						.map(categoryName -> new Category(categoryName))
+						.collect(Collectors.toList()))
 				.build();
 		
 		return movie;

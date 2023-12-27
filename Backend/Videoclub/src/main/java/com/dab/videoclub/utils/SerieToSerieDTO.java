@@ -1,6 +1,10 @@
 package com.dab.videoclub.utils;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 import com.dab.videoclub.dto.SerieDTO;
+import com.dab.videoclub.entities.Category;
 import com.dab.videoclub.entities.Serie;
 
 public class SerieToSerieDTO {
@@ -14,7 +18,9 @@ public class SerieToSerieDTO {
 				.numberSeasons(serie.getNumberSeasons())
 				.releaseDate(serie.getReleaseDate())
 				.synopsis(serie.getSynopsis())
-				.categories(serie.getCategories())
+				.categories(serie.getCategories().stream()
+						.map(Category::getCategory)
+						.toArray(String[]::new))
 				.seasons(serie.getSeasons())
 				.build();
 		
@@ -30,7 +36,9 @@ public class SerieToSerieDTO {
 				.numberSeasons(dto.getNumberSeasons())
 				.releaseDate(dto.getReleaseDate())
 				.synopsis(dto.getSynopsis())
-				.categories(dto.getCategories())
+				.categories(Arrays.stream(dto.getCategories())
+						.map(categoryName -> new Category(categoryName))
+						.collect(Collectors.toList()))
 				.seasons(dto.getSeasons())
 				.build();
 		
