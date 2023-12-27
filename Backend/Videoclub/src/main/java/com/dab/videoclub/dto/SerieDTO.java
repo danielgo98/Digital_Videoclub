@@ -3,7 +3,6 @@ package com.dab.videoclub.dto;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.dab.videoclub.entities.Category;
 import com.dab.videoclub.entities.Season;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class SerieDTO {
 	
-	private int id;
+	private Long id;
 	
 	private String title;
 	

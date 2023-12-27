@@ -28,7 +28,6 @@ public class SerieToSerieDTO {
 	}
 	
 	public static Serie convertToEntity(SerieDTO dto) {
-		
 		Serie serie = Serie.builder()
 				.id(dto.getId())
 				.title(dto.getTitle())
@@ -39,8 +38,7 @@ public class SerieToSerieDTO {
 				.categories(Arrays.stream(dto.getCategories())
 						.map(categoryName -> new Category(categoryName))
 						.collect(Collectors.toList()))
-				.seasons(dto.getSeasons())
-				.build();
+				.seasons(dto.getSeasons()).build();
 		
 		return serie;
 	}

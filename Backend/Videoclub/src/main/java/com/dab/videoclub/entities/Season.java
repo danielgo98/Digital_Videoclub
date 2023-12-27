@@ -3,6 +3,8 @@ package com.dab.videoclub.entities;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,15 +16,12 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "SEASONS")
 public class Season implements Serializable{
@@ -32,7 +31,7 @@ public class Season implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_SEASON")
-	private int id;
+	private Long id;
 	
 	@Column(name = "SEASON_NAME")
 	private String name;
@@ -43,18 +42,12 @@ public class Season implements Serializable{
 	@Column(name = "RELEASE_DATE")
 	private LocalDate releaseDate;
 	
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "SERIE_ID")
 	private Serie serie;
 	
 	@Column(name = "TRAILER")
 	private String trailer;
-	
-
-	@Override
-	public String toString() {
-		return "Season [id=" + id + ", name=" + name + ", chapters=" + chapters + ", releaseDate=" + releaseDate
-				+ " , trailer=" + trailer + "]";
-	}
 
 }

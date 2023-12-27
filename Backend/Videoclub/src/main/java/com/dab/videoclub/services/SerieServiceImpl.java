@@ -62,6 +62,10 @@ public class SerieServiceImpl implements SerieService{
 			}
 		}
 		
+		if(managedCategories.isEmpty()) {
+			throw new CategoryNotFoundException("La categoria de la pelicula que ha añadido no se encuentra en nuestra base de datos.");
+		}
+		
 		serie.setCategories(managedCategories);
 		return serieRepository.save(serie);
 	}

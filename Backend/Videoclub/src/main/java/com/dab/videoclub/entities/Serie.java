@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.hibernate.annotations.LazyCollection;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -21,15 +21,12 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "SERIES")
 public class Serie implements Serializable{
@@ -39,7 +36,7 @@ public class Serie implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_SERIE")
-	private int id;
+	private Long id;
 	
 	@Column(name = "TITLE")
 	private String title;
@@ -56,24 +53,21 @@ public class Serie implements Serializable{
 	@Column(name = "SYNOPSIS")
 	private String synopsis;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	@JoinTable(name = "SERIE_CATEGORY",
 			   joinColumns = @JoinColumn(name = "ID_SERIE"),
 			   inverseJoinColumns = @JoinColumn(name = "ID_CATEGORY"))
 	private List<Category> categories;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "serie",
 			   cascade = CascadeType.ALL,
 			   orphanRemoval = true,
-			   fetch = FetchType.EAGER)
+			   fetch = FetchType.LAZY)
 	private List<Season> seasons;
 	
-
-	@Override
-	public String toString() {
-		return "Serie [id=" + id + ", title=" + title + ", image=" + image + ", numberSeasons=" + numberSeasons
-				+ ", releaseDate=" + releaseDate + ", synopsis=" + synopsis + ", categories=" + categories
-				+ ", seasons=" + seasons + "]";
+	public Serie(Long id) {
+		this.id = id;
 	}
 	
 }

@@ -1,9 +1,6 @@
 package com.dab.videoclub.dto;
 
 import java.time.LocalDate;
-import java.util.List;
-
-import com.dab.videoclub.entities.Category;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class SeasonDTO {
 	
-	private int id;
+	private Long id;
 	
 	private String name;
 	
