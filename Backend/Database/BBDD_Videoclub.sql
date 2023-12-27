@@ -5,7 +5,7 @@ use videoclub;
 create table USERS(
 ID_USUARIO int primary key auto_increment, 
 EMAIL varchar(50) not null unique,
-PASSWORD varchar(30) not null unique,
+PASSWORD varchar(30) not null,
 USERNAME varchar(40) not null unique
 )engine=innodb;
 

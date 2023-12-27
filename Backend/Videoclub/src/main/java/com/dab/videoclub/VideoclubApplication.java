@@ -9,8 +9,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class VideoclubApplication {
 
-	
-
 	public static void main(String[] args) throws IOException {
 		ConfigurableApplicationContext ctx = SpringApplication.run(VideoclubApplication.class, args);
 		System.in.read();
