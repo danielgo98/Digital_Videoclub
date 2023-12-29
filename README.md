@@ -9,7 +9,7 @@ Technologies that im going to use to this project:
 - Testing with JUnit 5 and Mockito
 
 # FRONTEND
-- Angular
+- React
 - TypeScript
 - Tailwind CSS
 - Frame motion
