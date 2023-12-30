@@ -13,3 +13,4 @@ Technologies that im going to use to this project:
 - TypeScript
 - Tailwind CSS
 - Frame motion
+- Vite

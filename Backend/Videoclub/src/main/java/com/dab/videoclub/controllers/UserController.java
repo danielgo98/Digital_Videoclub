@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dab.videoclub.dto.UserDTO;
 import com.dab.videoclub.entities.User;
+import com.dab.videoclub.exceptions.UserNotFoundException;
 import com.dab.videoclub.services.UserService;
 import com.dab.videoclub.utils.UserToUserDTO;
 
@@ -27,7 +28,7 @@ public class UserController {
 	private UserService userService;
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<?> getUser(@PathVariable("id") Long id){
+	public ResponseEntity<?> getUserById(@PathVariable("id") Long id){
 		
 		var user = userService.findById(id);
 		
@@ -37,8 +38,28 @@ public class UserController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
-		UserDTO userDTO = UserToUserDTO.convertToDTO(user);
+		var userDTO = UserToUserDTO.convertToDTO(user);
 		return ResponseEntity.status(HttpStatus.FOUND).body(userDTO);
+	}
+	
+	@GetMapping("/login/{username}/{password}")
+	public ResponseEntity<?> getUserLogin(@PathVariable("username") String username, @PathVariable("password") String password){
+		
+		var user = new User();
+		
+		try {
+			
+			user = userService.findUser(username, password);
+			
+		} catch (UserNotFoundException e) {
+			var errorMap = new HashMap<>();
+			errorMap.put("Error", e.getMessage());
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
+		}
+		
+		var userDTO = UserToUserDTO.convertToDTO(user);
+		return ResponseEntity.status(HttpStatus.FOUND).body(userDTO);
+		
 	}
 	
 	@PostMapping("/")

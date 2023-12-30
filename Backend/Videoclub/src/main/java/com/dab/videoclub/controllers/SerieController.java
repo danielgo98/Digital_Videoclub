@@ -26,7 +26,8 @@ public class SerieController {
 		
 		var series = serieService.findAll();
 		var seriesDTO = series.stream()
-				.map(serie -> SerieToSerieDTO.convertToDTO(serie));
+				.map(serie -> SerieToSerieDTO.convertToDTO(serie))
+				.collect(Collectors.toList());
 		
 		return ResponseEntity.status(HttpStatus.OK).body(seriesDTO);	
 	}
