@@ -9,8 +9,6 @@ Technologies that im going to use to this project:
 - Testing with JUnit 5 and Mockito
 
 # FRONTEND
-- React
+- Angular
 - TypeScript
 - Tailwind CSS
-- Frame motion
-- Vite
