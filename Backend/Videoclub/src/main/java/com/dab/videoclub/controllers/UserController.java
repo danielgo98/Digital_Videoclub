@@ -1,6 +1,7 @@
 package com.dab.videoclub.controllers;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,34 +31,36 @@ public class UserController {
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getUserById(@PathVariable("id") Long id){
 		
-		var user = userService.findById(id);
+		User user = userService.findById(id);
 		
 		if(user == null) {
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("error", "User with id " + id + " not found");
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
-		var userDTO = UserToUserDTO.convertToDTO(user);
+		UserDTO userDTO = UserToUserDTO.convertToDTO(user);
 		return ResponseEntity.status(HttpStatus.FOUND).body(userDTO);
 	}
 	
 	@GetMapping("/login/{username}/{password}")
 	public ResponseEntity<?> getUserLogin(@PathVariable("username") String username, @PathVariable("password") String password){
 		
-		var user = new User();
+		User user = new User();
 		
 		try {
 			
 			user = userService.findUser(username, password);
 			
 		} catch (UserNotFoundException e) {
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", e.getMessage());
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
-		var userDTO = UserToUserDTO.convertToDTO(user);
+		UserDTO userDTO = UserToUserDTO.convertToDTO(user);
 		return ResponseEntity.status(HttpStatus.FOUND).body(userDTO);
 		
 	}
@@ -65,7 +68,7 @@ public class UserController {
 	@PostMapping("/")
 	public ResponseEntity<?> create(@RequestBody UserDTO userDTO){
 		
-		var user = UserToUserDTO.converToDomain(userDTO);
+		User user = UserToUserDTO.converToDomain(userDTO);
 		userService.save(user);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(userDTO);
@@ -75,20 +78,22 @@ public class UserController {
 	public ResponseEntity<?> update(@RequestBody UserDTO userDTO , @PathVariable("id") Long id){
 		
 		if(!userDTO.getId().equals(id)) {
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "Ids not equals");
+			
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorMap);
 		}
 		
 		User user = userService.findById(id);
 		
 		if(user == null) {
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "User with id " + id + " not found");
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
-		var userSaved = UserToUserDTO.converToDomain(userDTO);
+		User userSaved = UserToUserDTO.converToDomain(userDTO);
 		userService.save(userSaved);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).build();
@@ -98,14 +103,13 @@ public class UserController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") Long id){
 		
-		var user = userService.findById(id);
+		User user = userService.findById(id);
 		
 		if(user == null) {
-			
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "User with id " + id + " not found");
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 			
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
 		userService.delete(user);

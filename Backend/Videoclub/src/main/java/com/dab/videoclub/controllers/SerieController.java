@@ -1,6 +1,8 @@
 package com.dab.videoclub.controllers;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dab.videoclub.dto.SerieDTO;
+import com.dab.videoclub.entities.Serie;
 import com.dab.videoclub.services.SerieService;
 import com.dab.videoclub.utils.SerieToSerieDTO;
 
@@ -24,8 +28,8 @@ public class SerieController {
 	@GetMapping("/")
 	public ResponseEntity<?> getAll(){
 		
-		var series = serieService.findAll();
-		var seriesDTO = series.stream()
+		List<Serie> series = serieService.findAll();
+		List<SerieDTO> seriesDTO = series.stream()
 				.map(serie -> SerieToSerieDTO.convertToDTO(serie))
 				.collect(Collectors.toList());
 		
@@ -35,16 +39,17 @@ public class SerieController {
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getSerieById(@PathVariable("id") Long id){
 		
-		var serie = serieService.findById(id);
+		Serie serie = serieService.findById(id);
 		
 		if(serie == null) {
 			
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "Serie with id " + id + " not found");
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);			
 		}
 		
-		var serieDTO = SerieToSerieDTO.convertToDTO(serie);
+		SerieDTO serieDTO = SerieToSerieDTO.convertToDTO(serie);
 		return ResponseEntity.status(HttpStatus.FOUND).body(serieDTO);
 		
 	}
@@ -52,15 +57,16 @@ public class SerieController {
 	@GetMapping("/name/{name}")
 	public ResponseEntity<?> getSerieByName(@PathVariable("name") String name){
 		
-		var series = serieService.findByName(name);
+		List<Serie> series = serieService.findByName(name);
 		
 		if(series.isEmpty()) {	
-			var errorMap = new HashMap<>();
+			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "Serie with name " + name + " not found");
+			
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
 		
-		var seriesDTO = series.stream()
+		List<SerieDTO> seriesDTO = series.stream()
 				.map(serie -> SerieToSerieDTO.convertToDTO(serie))
 				.collect(Collectors.toList());
 		
