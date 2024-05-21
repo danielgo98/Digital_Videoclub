@@ -5,12 +5,11 @@ Technologies that im going to use to this project:
 # BACKEND
 - Java
 - Spring Framework
+- Lombok
 - MySQL
 - Testing with JUnit 5 and Mockito
 
 # FRONTEND
-- React
+- Angular
 - TypeScript
 - Tailwind CSS
-- Frame motion
-- Vite
