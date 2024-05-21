@@ -13,3 +13,6 @@ Technologies that im going to use to this project:
 - Angular
 - TypeScript
 - Tailwind CSS
+
+##
+- URL Swagger: http://localhost:8080/swagger-ui/index.html#/
