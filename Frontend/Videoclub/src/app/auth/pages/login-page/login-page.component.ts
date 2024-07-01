@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login-page',
@@ -9,8 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginPageComponent implements OnInit {
 
   loginForm: FormGroup = new FormGroup({});
+  userInfo: string = '';
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService) {}
 
   ngOnInit(): void {
       this.loginForm = this.formBuilder.group({
@@ -20,7 +24,14 @@ export class LoginPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log(this.loginForm.value)
+    this.authService.login(this.loginForm.value)
+    .pipe(
+      catchError(error => {
+        this.userInfo = 'Error al iniciar sesión, comprueba los datos introducidos.';
+        return[];
+      })
+    )
+    .subscribe();
   }
 
 

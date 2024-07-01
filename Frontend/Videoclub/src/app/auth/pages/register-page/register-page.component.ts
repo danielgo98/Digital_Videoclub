@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-register-page',
@@ -10,7 +12,9 @@ export class RegisterPageComponent implements OnInit {
 
   registerForm: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder) {}
+  userInfo: string = '';
+
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
 
 
   ngOnInit(): void {
@@ -22,7 +26,17 @@ export class RegisterPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log(this.registerForm.value);
+    if(!this.registerForm.value) return;
+
+    this.authService.register(this.registerForm.value)
+    .pipe(
+      catchError(error => {
+        this.userInfo = 'Error al crear la cuenta, los datos introducidos no son correctos';
+        console.error(error);
+        return [];
+      })
+    )
+    .subscribe();
   }
 
 }

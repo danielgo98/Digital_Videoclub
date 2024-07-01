@@ -1,6 +1,6 @@
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md">
-    <h1 class="text-3xl font-semibold text-center text-black">Login</h1>
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-sm p-6 bg-white rounded-md shadow-md">
+    <h1 class="text-3xl font-semibold text-center text-black">Iniciar Sesión</h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div>
@@ -22,5 +22,9 @@
         </div>
 
     </form>
+  </div>
+
+  <div class="w-full max-w-sm mt-4 p-3 bg-white border-2 border-red-600 text-black text-center rounded-md" *ngIf="userInfo != ''">
+    {{ userInfo }}
   </div>
 </div>

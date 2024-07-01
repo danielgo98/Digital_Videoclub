@@ -1,6 +1,6 @@
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md">
-      <h1 class="text-3xl font-semibold text-center text-black">Register</h1>
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md">
+      <h1 class="text-3xl font-semibold text-center text-black">Crear cuenta</h1>
       <form class="mt-6" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
           <div>
@@ -19,13 +19,16 @@
           </div>
 
           <div class="flex items-center justify-between mt-4">
-            <a routerLink="/auth/login" class="text-sm text-gray-600 hover:underline">¿Ya tienes cuenta? inicia sesión</a>
+              <a routerLink="/auth/login" class="text-sm text-gray-600 hover:underline">¿Ya tienes cuenta? inicia sesión</a>
           </div>
 
           <div class="mt-6">
               <button class="w-full px-4 py-2 tracking-wide text-white bg-black rounded-md hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Register</button>
           </div>
-
       </form>
+
+      <div class="w-full mt-4 p-3 bg-white border-2 border-red-600 text-black text-center rounded-md" *ngIf="userInfo != ''">
+          {{ userInfo }}
+      </div>
   </div>
 </div>
