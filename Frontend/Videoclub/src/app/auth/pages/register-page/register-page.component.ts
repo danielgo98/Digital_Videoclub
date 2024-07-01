@@ -12,7 +12,9 @@ export class RegisterPageComponent implements OnInit {
 
   registerForm: FormGroup = new FormGroup({});
 
-  userInfo: string = '';
+  errorUser: string = '';
+
+  userCreatedInfo: string = '';
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
 
@@ -26,17 +28,16 @@ export class RegisterPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    if(!this.registerForm.value) return;
+    debugger;
+    if(this.registerForm.invalid) {
+      this.errorUser = 'Error al crear la cuenta, los datos introducidos son incorrectos.'
 
-    this.authService.register(this.registerForm.value)
-    .pipe(
-      catchError(error => {
-        this.userInfo = 'Error al crear la cuenta, los datos introducidos no son correctos';
-        console.error(error);
-        return [];
-      })
-    )
-    .subscribe();
+      return;
+    }
+
+    this.authService.register(this.registerForm.value).subscribe();
+    this.userCreatedInfo = 'Cuenta creada correctamente'
+    this.errorUser = '';
   }
 
 }
