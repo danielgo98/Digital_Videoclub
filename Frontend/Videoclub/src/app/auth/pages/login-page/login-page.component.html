@@ -1,0 +1,26 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-sm p-6 m-auto bg-white rounded-md shadow-md">
+    <h1 class="text-3xl font-semibold text-center text-black">Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label for="username" class="block text-sm text-gray-700">Usuario</label>
+            <input type="text" id="username" formControlName="username" class="w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:outline-none focus:ring">
+        </div>
+
+        <div class="mt-4">
+            <label for="password" class="block text-sm text-gray-700">Contraseña</label>
+            <input type="password" id="password" formControlName="password" class="w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-blue-500 focus:outline-none focus:ring">
+        </div>
+
+        <div class="flex items-center justify-between mt-4">
+            <a routerLink="/auth/new-account" class="text-sm text-gray-600 hover:underline">Registrate si no tienes cuenta</a>
+        </div>
+
+        <div class="mt-6">
+            <button class="w-full px-4 py-2 tracking-wide text-white bg-black rounded-md hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Iniciar sesion</button>
+        </div>
+
+    </form>
+  </div>
+</div>
