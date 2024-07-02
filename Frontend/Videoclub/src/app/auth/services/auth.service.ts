@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { User } from '../interfaces/user.interface';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
 
   private baseUrl: string = 'http://localhost:8080';
-
-  private user?: User;
 
   constructor(private http: HttpClient) {}
 

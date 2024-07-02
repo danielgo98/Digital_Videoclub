@@ -52,6 +52,7 @@ export class LoginPageComponent implements OnInit {
 
   private logginSuccess(): void {
     console.log(this.userLogged);
+    this.router.navigate(['series'], {queryParams: {user:  JSON.stringify(this.userLogged)}});
   }
 
 

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../../interfaces/user.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout-page',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './layout-page.component.css'
 })
 export class LayoutPageComponent {
+
 
 }
