@@ -62,7 +62,7 @@ public class UserController {
 		}
 
 		UserDTO userDTO = UserToUserDTO.convertToDTO(user);
-		return ResponseEntity.status(HttpStatus.FOUND).body(userDTO);
+		return ResponseEntity.status(HttpStatus.OK).body(userDTO);
 
 	}
 
