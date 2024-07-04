@@ -5,6 +5,7 @@ import { SeriesListPageComponent } from './pages/series-list-page/series-list-pa
 import { CommonModule } from '@angular/common';
 import { SeriesRoutingModule } from './series-routing.module';
 import { SeriesLayoutPageComponent } from './pages/series-layout-page/series-layout-page.component';
+import { SerieCardComponent } from './components/serie-card/serie-card.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { SeriesLayoutPageComponent } from './pages/series-layout-page/series-lay
     SeriesLayoutPageComponent,
     SeriePageComponent,
     SeriesListPageComponent,
+    SerieCardComponent,
   ],
 })
 export class SeriesModule { }

@@ -1,1 +1,10 @@
-<p>series-list-page works!</p>
+<div class="min-h-screen flex flex-col items-center">
+  <div class="w-full max-w-screen-xl p-4 flex">
+    <div class="bg-white p-4 rounded-lg flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+      <ul *ngFor="let serie of showAllSeries()">
+        <serie-card [serie]="serie"></serie-card>
+      </ul>
+
+    </div>
+  </div>

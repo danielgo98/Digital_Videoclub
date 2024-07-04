@@ -1,2 +1,20 @@
-<p>BIENVENIDO {{currentUser?.username}}</p>
-<router-outlet/>
+<div class="bg-gray-100">
+  <div class="min-h-screen flex flex-col items-center">
+    <header class="w-full bg-black p-4 flex flex-col sm:flex-row items-center justify-between">
+      <div class="flex flex-col items-center sm:items-start mb-4 sm:mb-0">
+          <h1 class="text-white text-2xl font-bold">CineStore</h1>
+          <p class="text-white text-md font-bold">Bienvenido {{currentUser?.username}}</p>
+      </div>
+      <nav class="flex-1 flex justify-center mb-4 sm:mb-0">
+          <div class="flex space-x-4">
+              <a class="bg-black text-center text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Movies</a>
+              <a routerLink="/series/list" class="bg-black text-center text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Series</a>
+          </div>
+      </nav>
+      <form action="" class="flex items-center">
+          <input type="text" placeholder="Search for titles..." class="bg-white text-black rounded px-4 py-2 max-w-full sm:max-w-xs mr-2">
+          <button class="bg-black text-center text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Buscar</button>
+      </form>
+  </header>
+  <router-outlet/>
+</div>
