@@ -5,6 +5,7 @@ import { catchError } from 'rxjs';
 
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../interfaces/user.interface';
+import { UserService } from '../../../shared/services/user.service';
 
 @Component({
   selector: 'app-login-page',
@@ -19,7 +20,8 @@ export class LoginPageComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private authService: AuthService,
-            private router: Router) {}
+              private userService: UserService,
+              private router: Router) {}
 
   ngOnInit(): void {
       this.loginForm = this.formBuilder.group({
@@ -45,6 +47,7 @@ export class LoginPageComponent implements OnInit {
         email: response.email
       };
       this.userLogged = userResponse;
+      this.userService.setUser(userResponse);
       this.logginSuccess();
       this.userInfo = '';
     });
@@ -52,7 +55,7 @@ export class LoginPageComponent implements OnInit {
 
   private logginSuccess(): void {
     console.log(this.userLogged);
-    this.router.navigate(['series'], {queryParams: {user:  JSON.stringify(this.userLogged)}});
+    this.router.navigate(['series']);
   }
 
 

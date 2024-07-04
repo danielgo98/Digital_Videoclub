@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../../auth/interfaces/user.interface';
 import { ActivatedRoute } from '@angular/router';
+import { UserService } from '../../../shared/services/user.service';
 
 @Component({
   selector: 'app-series-layout-page',
@@ -9,19 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SeriesLayoutPageComponent implements OnInit {
 
-  user?: User;
+  currentUser?: User | null;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-
-    this.activatedRoute.queryParams.subscribe(params => {
-
-      if(params && params['user']) {
-        this.user = JSON.parse(params['user']);
-      }
-
-    });
+    console.log(this.userService.getUser());
+    this.currentUser = this.userService.getUser();
   }
 
 }
