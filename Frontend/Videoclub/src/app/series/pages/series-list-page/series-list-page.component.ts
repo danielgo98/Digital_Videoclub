@@ -18,7 +18,6 @@ export class SeriesListPageComponent implements OnInit {
   ngOnInit(): void {
     this.serieService.getAllSeries()
     .subscribe(response => {
-      debugger;
       const seriesFetched: Serie[] = [];
       response.forEach(serieResponse => seriesFetched.push(serieResponse));
       this.series = seriesFetched;

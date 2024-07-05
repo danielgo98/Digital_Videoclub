@@ -186,7 +186,7 @@ insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
 '"Walter White, profesor con cáncer, se convierte en fabricante de metanfetaminas para asegurar el futuro familiar en "Breaking Bad", desencadenando consecuencias y dilemas morales.');
 
 insert into SERIES(TITLE, IMAGE, NUMBER_SEASONS, RELEASE_DATE, SYNOPSIS) values
-('Cobra Kai', 'https://pics.filmaffinity.com/cobra_kai-773106365-mmed.jpg', 5, '2018/05/02', 
+('Cobra Kai', 'https://pics.filmaffinity.com/cobra_kai-980186140-mmed.jpg', 5, '2018/05/02', 
 '"En "Cobra Kai", la rivalidad resurge entre Johnny y Daniel, desencadenando conflictos y lecciones de karate que afectan a una nueva generación.');
 
 -- SERIE_CATEGORY
@@ -209,104 +209,110 @@ insert into SERIE_CATEGORY(ID_SERIE, ID_CATEGORY) values(9, 10);
 
 -- SEASONS
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga del East Blue', 61, '1999/10/20', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga del East Blue', 61, '1999/10/20', 1, 'https://www.youtube.com/embed/G2yiXao9W7E?si=Eubwl3Xns4KT74Ea');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Arabasta', 69, '2001/03/21', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Arabasta', 69, '2001/03/21', 1, 'https://www.youtube.com/embed/7JERctGBNYk?si=SukRhoJoYBkrPEbp');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Skypeia', 62, '2003/02/02', 1,'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Skypeia', 62, '2003/02/02', 1,'https://www.youtube.com/embed/AYhIPAs8JTU?si=kl18_-I59BCu_5PK');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Water 7', 118, '2004/06/20', 1,'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Water 7', 118, '2004/06/20', 1,'https://www.youtube.com/embed/KcjRlCT_c8g?si=S7-PvvR9vigjOdt3');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Thriller Bark', 59, '2007/12/23', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Thriller Bark', 59, '2007/12/23', 1, 'https://www.youtube.com/embed/ixCsF4RDoME?si=pPJoLRnyGAIovb3i');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Arco de Marineford', 132, '2009/01/18', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Marineford', 132, '2009/01/18', 1, 'https://www.youtube.com/embed/hJgJTTIbMDI?si=oXk0vy2HwF-o-gT5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de la isla Gyojin', 57, '2011/10/02', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de la isla Gyojin', 57, '2011/10/02', 1, 'https://www.youtube.com/embed/v_lyicIHv0I?si=CJQLGx9O3amcYdtm');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Dressrossa', 172, '2013/01/06', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de Dressrossa', 172, '2013/01/06', 1, 'https://www.youtube.com/embed/jJHDDYd6PrM?si=1yOOQEqf6wIzPMNu');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de los cuatro emperadores', 339, '2016/06/26', 1, 'https://www.youtube.com/watch?v=Cy7cn-Tkw90');
+('Saga de los cuatro emperadores', 339, '2016/06/26', 1, 'https://www.youtube.com/embed/YFbno_aPm0w?si=4eOTtdHrh1M92j7w');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 1', 10, '2011/04/17', 2, 'https://www.youtube.com/watch?v=GkvDHqzDz-w');
+('Temporada 1', 10, '2011/04/17', 2, 'https://www.youtube.com/embed/GkvDHqzDz-w?si=RAjOe9PRvb07mQGf');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 2', 10, '2012/04/01', 2, 'https://www.youtube.com/watch?v=spzf-ihXpX4');
+('Temporada 2', 10, '2012/04/01', 2, 'https://www.youtube.com/embed/spzf-ihXpX4?si=7ejbahTywh769ZUZ');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 3', 10, '2013/03/31', 2, 'https://www.youtube.com/watch?v=rw_QIbi40zU');
+('Temporada 3', 10, '2013/03/31', 2, 'https://www.youtube.com/embed/rw_QIbi40zU?si=WJgYjln5jdKIljdd');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 4', 10, '2014/04/06', 2, 'https://www.youtube.com/watch?v=QeuBq0qpNrQ');
+('Temporada 4', 10, '2014/04/06', 2, 'https://www.youtube.com/embed/QeuBq0qpNrQ?si=JP7lJ-DypHaWjjta');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 5', 10, '2015/04/12', 2, 'https://www.youtube.com/watch?v=KqYJKqUuVOI');
+('Temporada 5', 10, '2015/04/12', 2, 'https://www.youtube.com/embed/KqYJKqUuVOI?si=rJRcu49Y3ijPQO6K');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 6', 10, '2016/04/24', 2, 'https://www.youtube.com/watch?v=l8tUY14C5cE');
+('Temporada 6', 10, '2016/04/24', 2, 'https://www.youtube.com/embed/l8tUY14C5cE?si=npXAAzfBFm6GuFzJ');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 7', 7, '2017/07/16', 2, 'https://www.youtube.com/watch?v=f-rlcVEH-Y4');
+('Temporada 7', 7, '2017/07/16', 2, 'https://www.youtube.com/embed/f-rlcVEH-Y4?si=BUuZdW0omZZEI8Cu');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 8', 6, '1019/04/14', 2, 'https://www.youtube.com/watch?v=EhuKM_mcGhA');
+('Temporada 8', 6, '1019/04/14', 2, 'https://www.youtube.com/embed/EhuKM_mcGhA?si=GPUKmUwqJvy79Dso');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 1', 24, '2020/10/03', 3, 'https://www.youtube.com/watch?v=FqFQD-TZBnM');
+('Season 1', 24, '2020/10/03', 3, 'https://www.youtube.com/embed/GwaRztMaoY0?si=TgV5sjuXkKK2oajT');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 2', 23, '2023/07/06', 3, 'https://www.youtube.com/watch?v=FqFQD-TZBnM');
+('Season 2', 23, '2023/07/06', 3, 'https://www.youtube.com/embed/AQcOdxEmfEg?si=VljDg5OHcpbduhwQ');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Pilaf', 13, '1986/02/06', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('Saga de Pilaf', 13, '1986/02/06', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('21° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 15, '1986/05/28', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('21° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 15, '1986/05/28', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga del Ejército del Lazo rojo (Red Ribbon)', 40, '1986/09/10', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('Saga del Ejército del Lazo rojo (Red Ribbon)', 40, '1986/09/10', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('El Palacio de Uranai Baba', 14, '1987/07/08', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('El Palacio de Uranai Baba', 14, '1987/07/08', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('22° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 19, '1987/10/14', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('22° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 19, '1987/10/14', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Piccolo', 31, '1988/04/24', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('Saga de Piccolo', 31, '1988/04/24', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('23° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 21, '1988/11/09', 4, 'https://www.youtube.com/watch?v=dtD_xGvkWLk');
+('23° Torneo de las Artes Marciales (Tenkaichi Budōkai)', 21, '1988/11/09', 4, 'https://www.youtube.com/embed/dtD_xGvkWLk?si=B_rVVTD_WbDa34q5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga Saiyan', 35, '1989/04/26', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+('Saga Saiyan', 35, '1989/04/26', 5, 'https://www.youtube.com/embed/Kf9h9C3RI4Y?si=3VsnSYmLtDasT5_l');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Garlic jr', 10, '1991/09/11', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+('Saga de Freezer', 72, '1990/03/14', 5, 'https://www.youtube.com/embed/3HT60PKvrfM?si=GW5wnIVar2PT1LX2'); 
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga Androide', 82, '1991/11/20', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+('Saga de Garlic jr', 10, '1991/07/17', 5, 'https://www.youtube.com/embed/3HT60PKvrfM?si=GW5wnIVar2PT1LX2');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Majin Buu', 92, '1993/09/08', 5, 'https://www.youtube.com/watch?v=CXnLVyp_SIY');
+('Saga Androide', 22, '1991/09/18', 5, 'https://www.youtube.com/embed/3HT60PKvrfM?si=GW5wnIVar2PT1LX2');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de la Batalla de los Dioses', 14, '2015/07/05', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+('Saga de Célula', 56, '1992/07/08', 5, 'https://www.youtube.com/embed/3HT60PKvrfM?si=GW5wnIVar2PT1LX2');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de la Resurreccion de Freezer', 13, '2015/10/18', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+('Saga del Torneo del Otro Mundo', 5, '1993/12/08', 5, 'https://www.youtube.com/embed/3HT60PKvrfM?si=GW5wnIVar2PT1LX2');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga del Torneo de Champa', 19, '2016/01/24', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+('Saga de Majin Buu', 92, '1994/02/16', 5, 'https://www.youtube.com/embed/HvOJnCHGwzc?si=7_e0uf8GXDTHGsps');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga de Trunks del Futuro', 30, '2016/06/12', 6, 'https://www.youtube.com/watch?v=jyjOaeq6kwo');
+('Saga de la Batalla de los Dioses', 14, '2015/07/05', 6, 'https://www.youtube.com/embed/jyjOaeq6kwo?si=LgEQfgUFFOqP7UHR');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Saga del Torneo de Poder', 55, '2017/02/05', 6, 'https://www.youtube.com/watch?v=v460edZq2Uo');
+('Saga de la Resurreccion de Freezer', 13, '2015/10/18', 6, 'https://www.youtube.com/embed/jyjOaeq6kwo?si=LgEQfgUFFOqP7UHR');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 1', 13, '2016/04/03', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Saga del Torneo de Champa', 19, '2016/01/24', 6, 'https://www.youtube.com/embed/jyjOaeq6kwo?si=LgEQfgUFFOqP7UHR');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 2', 25, '2017/04/01', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Saga de Trunks del Futuro', 30, '2016/06/12', 6, 'https://www.youtube.com/embed/jyjOaeq6kwo?si=LgEQfgUFFOqP7UHR');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 3', 25, '2018/04/07', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Saga del Torneo de Poder', 55, '2017/02/05', 6, 'https://www.youtube.com/embed/3vD4kl59-mc?si=VQWu6QqrD6KtzBJZ');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 4', 25, '2019/10/12', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Season 1', 13, '2016/04/03', 7, 'https://www.youtube.com/embed/-77UEct0cZM?si=QZoR2cT3t4bI1-gF');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 5', 25, '2021/03/21', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Season 2', 25, '2017/04/01', 7, 'https://www.youtube.com/embed/JVu7-XSI_OM?si=cv3gdpMxpe_bYNB-');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Season 6', 25, '2022/10/01', 7, 'https://www.youtube.com/watch?v=mJhzEHwiIbY');
+('Season 3', 25, '2018/04/07', 7, 'https://www.youtube.com/embed/v1YojYU5nPQ?si=fVLvAyYDOHCIkGVV');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 1', 7, '2008/01/20', 8, 'https://www.youtube.com/watch?v=V8WQhxHEmMc');
+('Season 4', 25, '2019/10/12', 7, 'https://www.youtube.com/embed/-t5--PiJsWo?si=qO4yNNAV7hDkmauD');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 2', 13, '2009/03/08', 8, 'https://www.youtube.com/watch?v=qqNrz_U7NRk');
+('Season 5', 25, '2021/03/21', 7, 'https://www.youtube.com/embed/PTbRl5h64tU?si=uQKtcZqJ_vxzo-HX');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 3', 13, '2010/03/21', 8, 'https://www.youtube.com/watch?v=TggkQXwe0Vk');
+('Season 6', 25, '2022/10/01', 7, 'https://www.youtube.com/embed/JFDFFoBClLY?si=JLseN9g3NTYnm7VX');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 4', 13, '2011/07/17', 8, 'https://www.youtube.com/watch?v=sZFOyNFKPug');
+('Temporada 1', 7, '2008/01/20', 8, 'https://www.youtube.com/embed/HhesaQXLuRY?si=zI3ppvQJgn966z-5');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 5', 16, '2012/07/15', 8, 'https://www.youtube.com/watch?v=_Z-PTJhf0Po');
+('Temporada 2', 13, '2009/03/08', 8, 'https://www.youtube.com/embed/qqNrz_U7NRk?si=0z0EQGCcYOid5gh1');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 1', 10, '2018/05/02', 9, 'https://www.youtube.com/watch?v=CfOuYm8EnBA');
+('Temporada 3', 13, '2010/03/21', 8, 'https://www.youtube.com/embed/TggkQXwe0Vk?si=gZgvyHclS6PHW7X_');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 2', 10, '2019/04/24', 9, 'https://www.youtube.com/watch?v=wbLyMWdNvzQ');
+('Temporada 4', 13, '2011/07/17', 8, 'https://www.youtube.com/embed/sZFOyNFKPug?si=O0SgsfLtECOQ1Y8J');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 3', 10, '2021/01/01', 9, 'https://www.youtube.com/watch?v=ZjUzMd6p4R8');
+('Temporada 5', 16, '2012/07/15', 8, 'https://www.youtube.com/embed/_Z-PTJhf0Po?si=BkrQRe6frGwGCwL2');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 4', 10, '2021/12/31', 9, 'https://www.youtube.com/watch?v=ZxWET9C2MYA');
+('Temporada 1', 10, '2018/05/02', 9, 'https://www.youtube.com/embed/CfOuYm8EnBA?si=r0Nw58Ptg276OdNx');
 insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
-('Temporada 5', 10, '2022/09/09', 9, 'https://www.youtube.com/watch?v=NMdSs5NkiOg');
+('Temporada 2', 10, '2019/04/24', 9, 'https://www.youtube.com/embed/wbLyMWdNvzQ?si=KpGIE991tJuh9_6P');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 3', 10, '2021/01/01', 9, 'https://www.youtube.com/embed/ZjUzMd6p4R8?si=Ez8FzT_s7-SFvzZP');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 4', 10, '2021/12/31', 9, 'https://www.youtube.com/embed/ZxWET9C2MYA?si=Y9C1pQRKYK_Q80qE');
+insert into SEASONS(SEASON_NAME, CHAPTERS, RELEASE_DATE, SERIE_ID, TRAILER) values
+('Temporada 5', 10, '2022/09/09', 9, 'https://www.youtube.com/embed/NMdSs5NkiOg?si=2cnBXTHEOxdZzocx');

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Serie } from '../interfaces/series.interface';
 
 @Injectable({providedIn: 'root'})
@@ -11,7 +11,11 @@ export class SeriesService {
   constructor(private http: HttpClient) { }
 
   public getAllSeries(): Observable<Serie[]> {
-    return this.http.get<Serie[]>(this.baseUrl + '/serie/');
+    return this.http.get<Serie[]>(`${this.baseUrl}/serie/`);
+  }
+
+  public getSerieById(id: number): Observable<Serie | undefined> {
+    return this.http.get<Serie | undefined>(`${this.baseUrl}/serie/${id}`);
   }
 
 }

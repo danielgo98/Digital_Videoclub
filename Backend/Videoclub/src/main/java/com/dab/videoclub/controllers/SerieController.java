@@ -21,57 +21,55 @@ import com.dab.videoclub.utils.SerieToSerieDTO;
 @RestController
 @RequestMapping(value = "/serie")
 public class SerieController {
-	
+
 	@Autowired
 	private SerieService serieService;
-	
+
 	@GetMapping("/")
-	public ResponseEntity<?> getAll(){
-		
+	public ResponseEntity<?> getAll() {
+
 		List<Serie> series = serieService.findAll();
-		List<SerieDTO> seriesDTO = series.stream()
-				.map(serie -> SerieToSerieDTO.convertToDTO(serie))
+		List<SerieDTO> seriesDTO = series.stream().map(serie -> SerieToSerieDTO.convertToDTO(serie))
 				.collect(Collectors.toList());
-		
-		return ResponseEntity.status(HttpStatus.OK).body(seriesDTO);	
+
+		return ResponseEntity.status(HttpStatus.OK).body(seriesDTO);
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<?> getSerieById(@PathVariable("id") Long id){
-		
+	public ResponseEntity<?> getSerieById(@PathVariable("id") Long id) {
+
 		Serie serie = serieService.findById(id);
-		
-		if(serie == null) {
-			
+
+		if (serie == null) {
+
 			Map<String, String> errorMap = new HashMap<>();
 			errorMap.put("Error", "Serie with id " + id + " not found");
-			
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);			
-		}
-		
-		SerieDTO serieDTO = SerieToSerieDTO.convertToDTO(serie);
-		return ResponseEntity.status(HttpStatus.FOUND).body(serieDTO);
-		
-	}
-	
-	@GetMapping("/name/{name}")
-	public ResponseEntity<?> getSerieByName(@PathVariable("name") String name){
-		
-		List<Serie> series = serieService.findByName(name);
-		
-		if(series.isEmpty()) {	
-			Map<String, String> errorMap = new HashMap<>();
-			errorMap.put("Error", "Serie with name " + name + " not found");
-			
+
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
 		}
-		
-		List<SerieDTO> seriesDTO = series.stream()
-				.map(serie -> SerieToSerieDTO.convertToDTO(serie))
+
+		SerieDTO serieDTO = SerieToSerieDTO.convertToDTO(serie);
+		return ResponseEntity.status(HttpStatus.OK).body(serieDTO);
+
+	}
+
+	@GetMapping("/name/{name}")
+	public ResponseEntity<?> getSerieByName(@PathVariable("name") String name) {
+
+		List<Serie> series = serieService.findByName(name);
+
+		if (series.isEmpty()) {
+			Map<String, String> errorMap = new HashMap<>();
+			errorMap.put("Error", "Serie with name " + name + " not found");
+
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorMap);
+		}
+
+		List<SerieDTO> seriesDTO = series.stream().map(serie -> SerieToSerieDTO.convertToDTO(serie))
 				.collect(Collectors.toList());
-		
+
 		return ResponseEntity.status(HttpStatus.FOUND).body(seriesDTO);
-		
+
 	}
 
 }
