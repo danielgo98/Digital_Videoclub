@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Serie } from '../../interfaces/series.interface';
 import { SeriesService } from '../../services/series.service';
 
+
 @Component({
   selector: 'app-series-list-page',
   templateUrl: './series-list-page.component.html',
@@ -9,9 +10,9 @@ import { SeriesService } from '../../services/series.service';
 })
 export class SeriesListPageComponent implements OnInit {
 
-  private series: Serie[] = [];
+  seriesFound: Serie[] = [];
 
-  loading: boolean = true;
+  private series: Serie[] = [];
 
   constructor(private serieService: SeriesService) {}
 
@@ -26,7 +27,22 @@ export class SeriesListPageComponent implements OnInit {
   }
 
   public showAllSeries(): Serie[] {
+    this.seriesFound = [];
     return this.series;
+  }
+
+  findSerie(name: string): void {
+
+    if(name == '') this.showAllSeries();
+
+    this.serieService.getSerieByName(name)
+      .subscribe(response => {
+        if (response) {
+          this.seriesFound = response;
+        } else {
+          this.seriesFound = [];
+        }
+      });
   }
 
 }

@@ -19,4 +19,8 @@ export class MoviesService {
     return this.http.get<Movie | undefined>(`${this.baseUrl}/movie/${id}`);
   }
 
+  public getMovieByTitle(title: string): Observable<Movie[] | undefined> {
+    return this.http.get<Movie[] | undefined>(`${this.baseUrl}/movie/title/${title}`);
+  }
+
 }

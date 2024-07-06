@@ -68,7 +68,7 @@ public class SerieController {
 		List<SerieDTO> seriesDTO = series.stream().map(serie -> SerieToSerieDTO.convertToDTO(serie))
 				.collect(Collectors.toList());
 
-		return ResponseEntity.status(HttpStatus.FOUND).body(seriesDTO);
+		return ResponseEntity.status(HttpStatus.OK).body(seriesDTO);
 
 	}
 

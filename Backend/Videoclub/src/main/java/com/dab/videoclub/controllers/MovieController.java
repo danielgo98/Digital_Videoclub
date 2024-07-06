@@ -68,7 +68,7 @@ public class MovieController {
 		List<MovieDTO> moviesDTO = movies.stream().map(movie -> MovieToMovieDTO.convertToDTO(movie))
 				.collect(Collectors.toList());
 
-		return ResponseEntity.status(HttpStatus.FOUND).body(moviesDTO);
+		return ResponseEntity.status(HttpStatus.OK).body(moviesDTO);
 
 	}
 

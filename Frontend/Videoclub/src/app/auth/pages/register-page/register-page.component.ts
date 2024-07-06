@@ -28,7 +28,6 @@ export class RegisterPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    debugger;
     if(this.registerForm.invalid) {
       this.errorUser = 'Error al crear la cuenta, los datos introducidos son incorrectos.'
 

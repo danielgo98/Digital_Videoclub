@@ -34,7 +34,6 @@ export class LoginPageComponent implements OnInit {
     this.authService.login(this.loginForm.value)
     .pipe(
       catchError(error => {
-        debugger;
         this.userInfo = 'Error al iniciar sesión, comprueba los datos introducidos.';
         return[];
       })

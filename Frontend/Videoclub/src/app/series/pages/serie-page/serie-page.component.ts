@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Serie } from '../../interfaces/series.interface';
-import { SeriesService } from '../../services/series.service';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
+
+import { Serie } from '../../interfaces/series.interface';
+import { SeriesService } from '../../services/series.service';
 
 @Component({
   selector: 'app-serie-page',

@@ -9,13 +9,39 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class MoviesListPageComponent implements OnInit {
 
-  movies?: Movie[];
+  private movies: Movie[] = [];
+
+  moviesFound: Movie[] = [];
 
   constructor(private movieService: MoviesService) {}
 
   ngOnInit(): void {
-    debugger;
     this.movieService.getAllMovies()
-    .subscribe( movies => this.movies = movies);
+    .subscribe( response => {
+      const moviesFetched: Movie[] = [];
+      response.forEach(movie => moviesFetched.push(movie));
+      this.movies =  moviesFetched;
+    });
   }
+
+  public showAllMovies(): Movie[] {
+    this.moviesFound = [];
+    return this.movies;
+  }
+
+  findMovie(title: string): void {
+
+    if(title == '') this.showAllMovies();
+
+    this.movieService.getMovieByTitle(title)
+    .subscribe(response => {
+      if (response) {
+        this.moviesFound = response;
+      } else {
+        this.moviesFound = [];
+      }
+    });
+
+  }
+
 }

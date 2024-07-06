@@ -1,0 +1,6 @@
+<div class="mt-5">
+  <form [formGroup]="searchForm" class="flex items-center" (ngSubmit)="onSubmit()">
+    <input type="input" formControlName="search" placeholder="Buscar..." class="bg-white text-black rounded px-4 py-2 max-w-full sm:max-w-xs mr-2 border border-black">
+    <button class="bg-black text-center text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-gray-700 focus:bg-gray-700 focus:outline-none">Buscar</button>
+  </form>
+</div>
