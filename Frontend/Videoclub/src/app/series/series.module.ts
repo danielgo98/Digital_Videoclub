@@ -6,7 +6,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { SeriesRoutingModule } from './series-routing.module';
 import { SeriesLayoutPageComponent } from './pages/series-layout-page/series-layout-page.component';
 import { SerieCardComponent } from './components/serie-card/serie-card.component';
-import { SafeUrlPipe } from './pipes/safe-url.pipe';
+import { SafeUrlPipe } from '../shared/pipes/safe-url.pipe';
 
 @NgModule({
   imports: [
