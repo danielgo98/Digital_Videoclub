@@ -1,0 +1,12 @@
+<div class="bg-white rounded shadow p-4">
+  <p class="text-center font-bold">{{movie.title}}</p>
+  <img class="image" src="{{movie.image}}" alt="{{movie.title}}">
+
+  <ul class="flex gap-2">
+    <li *ngFor="let category of movie.categories">
+      <span class="inline-block px-2 py-1 text-xs font-semibold leading-none text-white bg-blue-500 rounded-full">{{ category }}</span>
+    </li>
+  </ul>
+
+  <button [routerLink]="['/movies', movie.id]">Ver mas</button>
+</div>

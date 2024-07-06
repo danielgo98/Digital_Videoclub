@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs';
   templateUrl: './serie-page.component.html',
   styleUrl: './serie-page.component.css'
 })
-export class SeriePageComponent implements OnInit{
+export class SeriePageComponent implements OnInit {
 
   serie?: Serie;
 

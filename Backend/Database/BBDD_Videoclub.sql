@@ -82,51 +82,51 @@ insert into CATEGORIES(CATEGORY) values ('Drama');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('El Escuadrón Suicida', 'https://pics.filmaffinity.com/El_Escuadraon_Suicida-629689677-large.jpg', '2016/08/06', 
 'El Escuadrón Suicida, un grupo de villanos, emprende una peligrosa misión para destruir un laboratorio secreto. Entre acción y humor negro, buscan redención enfrentando amenazas mortales y desafíos impredecibles.',
-'James Gunn', 'https://www.youtube.com/watch?v=IblLmbGxw1Q');
+'James Gunn', 'https://www.youtube.com/embed/IblLmbGxw1Q?si=2k2N6HfmA_hCmiL5');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Guardianes de la Galaxia', 'https://pics.filmaffinity.com/Guardianes_de_la_galaxia-595487268-large.jpg', '2014/08/14', 
 '"Guardianes de la Galaxia" sigue a un grupo disfuncional de héroes espaciales mientras intentan detener a Ronan el Acusador y salvar el cosmos con música y humor.' 
-,'James Gunn', 'https://www.youtube.com/watch?v=F60FZKt_36s');
+,'James Gunn', 'https://www.youtube.com/embed/F60FZKt_36s?si=Wc2kOqF5ivUYkGPD');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Fast and Furious', 'https://pics.filmaffinity.com/Fast_Furious_X-556821969-large.jpg', '2023/05/19',
  '"Fast and Furious X" lleva a Toretto y su equipo a desafíos globales con carreras frenéticas y acrobacias imparables, enfrentándose a una amenaza inesperada. La acción y la lealtad se entrelazan en esta entrega explosiva.'
-,'Louis Leterrier', 'https://www.youtube.com/watch?v=FDhvbIqTQwI');
+,'Louis Leterrier', 'https://www.youtube.com/embed/FDhvbIqTQwI?si=T9sKqfxVE8Pi0Ejb');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Los Vengadores', 'https://pics.filmaffinity.com/the_avengers-439499921-mmed.jpg', '2012/04/27',
 '"Los Vengadores" reúnen a héroes como Iron Man, Thor, Hulk y Capitán América para enfrentar a Loki y salvar la Tierra. Con acción épica y humor, forjan una alianza improbable contra amenazas intergalácticas, demostrando que juntos son más fuertes.'
-, 'Joss Whedon', 'https://www.youtube.com/watch?v=HQIiYqOVTWo');
+, 'Joss Whedon', 'https://www.youtube.com/embed/HQIiYqOVTWo?si=f_hbQdKoNJhD1uGQ');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Piratas del Caribe', 'https://pics.filmaffinity.com/Piratas_del_Caribe_La_maldiciaon_de_la_Perla_Negra-627724446-large.jpg', '2003/08/14',
 '"La Maldición del Perla Negra": Jack Sparrow, Will y Elizabeth buscan un tesoro maldito en una aventura llena de piratas, misterios y humor.'
-, 'Gore Verbinski', 'https://www.youtube.com/watch?v=4s67PU-s1kc');
+, 'Gore Verbinski', 'https://www.youtube.com/embed/4s67PU-s1kc?si=BFyImApkv7U2Tefq');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Harry Potter', 'https://pics.filmaffinity.com/Harry_Potter_y_la_piedra_filosofal-154820574-mmed.jpg', '2001/11/30',
 '"Harry Potter y la Piedra Filosofal": Harry descubre su magia al ingresar a Hogwarts. Con amigos, enfrenta misterios y el mal resurgente, culminando en la búsqueda de la Piedra Filosofal.',
-'Chris Columbus', 'https://www.youtube.com/watch?v=ZgrCZVjPg9g');
+'Chris Columbus', 'https://www.youtube.com/embed/ZgrCZVjPg9g?si=tnLpoRATYyfrhiZi');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('La Mansion Encantada', 'https://pics.filmaffinity.com/La_mansiaon_encantada-303930929-large.jpg', '2004/01/30',
 '"La Mansión Encantada": Eddie Murphy es un agente inmobiliario que, junto a su familia, enfrenta fantasmas y revela oscuros secretos al explorar una mansión embrujada. Una comedia sobrenatural llena de risas y sustos.',
-'Rob Minkoff', 'https://www.youtube.com/watch?v=1DDEDBubnQU');
+'Rob Minkoff', 'https://www.youtube.com/embed/1DDEDBubnQU?si=69aQCfsKZ2di8ZVw');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Buscando a Nemo', 'https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg', '2003/11/28',
 '"Buscando a Nemo": Marlin busca desesperadamente a su hijo Nemo, capturado por un buceador. En su viaje acuático, encuentra amistades inolvidables y descubre el valor de la valentía y la amistad.'
-, 'Andrew Stanton', 'https://www.youtube.com/watch?v=ba4TwyaNhSQ');
+, 'Andrew Stanton', 'https://www.youtube.com/embed/ba4TwyaNhSQ?si=MeW3Crc0cPjriZoc');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Cars', 'https://pics.filmaffinity.com/Cars-746710621-large.jpg', '2006/07/06',
 '"Cars" sigue a Rayo McQueen, un auto de carreras, que aprende lecciones de humildad en el tranquilo Radiator Springs. La película celebra la amistad y descubre que hay más en la vida que la velocidad.'
-, 'John Lasseter', 'https://www.youtube.com/watch?v=8ZMklX5BzTo');
+, 'John Lasseter', 'https://www.youtube.com/embed/8ZMklX5BzTo?si=dWdiYdwetB-7bV9Z');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('El Planeta del Tesoro', 'https://pics.filmaffinity.com/El_planeta_del_tesoro-410694399-large.jpg', '2002/12/05',
 '"El Planeta del Tesoro" sigue a Jim Hawkins en una odisea espacial en busca de un tesoro legendario. A bordo de una nave interestelar, enfrenta peligros, forja amistades y descubre secretos en un viaje lleno de aventuras y sorpresas.',
-'John Musker, Ron Clements', 'https://www.youtube.com/watch?v=uokpV_AkQAc');
+'John Musker, Ron Clements', 'https://www.youtube.com/embed/uokpV_AkQAc?si=x4tb0hPKCsIormlg');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('Spider-man', 'https://pics.filmaffinity.com/Spider_Man-945131720-large.jpg', '2002/06/21',
 '"Spider-Man" (2002): Peter Parker, mordido por una araña radiactiva, descubre sus poderes y enfrenta al Duende Verde. Equilibrando amor y responsabilidad, Spider-Man emerge como un héroe en la ciudad de Nueva York.',
-'Sam Raimi', 'https://www.youtube.com/watch?v=t06RUxPbp_c');
+'Sam Raimi', 'https://www.youtube.com/embed/t06RUxPbp_c?si=3iV-EKj44xK0oUvw');
 insert into MOVIES(TITLE, IMAGE, RELEASE_DATE, SYNOPSIS, DIRECTOR, TRAILER) values
 ('El señor de los anillos', 'https://pics.filmaffinity.com/El_seanor_de_los_anillos_La_comunidad_del_anillo-744631610-large.jpg', '2001/12/19',
 '"El Señor de los Anillos: La Comunidad del Anillo" sigue a Frodo y compañía en una misión para destruir el Anillo Único. Enfrentan peligros, forjan amistades y luchan contra las fuerzas oscuras en una travesía épica por la Tierra Media.',
-'Peter Jackson', 'https://www.youtube.com/watch?v=iFOucwxKRFE');
+'Peter Jackson', 'https://www.youtube.com/embed/iFOucwxKRFE?si=j2OL7VW8kj_wUcid');
 
 -- MOVIE_CATEGORY
 insert into MOVIE_CATEGORY(ID_MOVIE, ID_CATEGORY) values (1, 1);

@@ -18,15 +18,15 @@
   </div>
   <div class="mt-10">
     <h2 class="text-2xl font-bold">Temporadas</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-        <div *ngFor="let season of serie?.seasons" class="bg-gray-100 p-4 rounded-lg shadow-md">
-            <h4 class="text-xl font-bold">{{season.name}}</h4>
-            <p>Fecha de estreno: {{season.releaseDate | date:'dd/MM/yyyy'}}</p>
-            <p>Nº de capítulos: {{season.chapters}}</p>
-            <div class="flex justify-center">
-              <iframe [src]="season.trailer| safeUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-4">
+      <div *ngFor="let season of serie?.seasons" class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold">{{season.name}}</h4>
+          <p>Fecha de estreno: {{season.releaseDate | date:'dd/MM/yyyy'}}</p>
+          <p>Nº de capítulos: {{season.chapters}}</p>
+          <div class="flex justify-center mt-4">
+              <iframe class="w-full h-96" [src]="season.trailer | safeUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
     </div>
 </div>
 </div>
