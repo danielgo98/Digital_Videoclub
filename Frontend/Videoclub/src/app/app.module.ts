@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieSearchComponent } from './shared/components/movie-search/movie-search.component';
+import { MovieSearchComponent } from './movies/components/movie-search/movie-search.component';
 
 @NgModule({
   declarations: [

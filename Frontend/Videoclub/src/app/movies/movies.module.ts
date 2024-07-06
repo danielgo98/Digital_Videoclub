@@ -8,7 +8,7 @@ import { MoviesLayoutPageComponent } from './pages/movies-layout-page/movies-lay
 import { MoviesRoutingModule } from './movies-routing.module';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
-import { MovieSearchComponent } from '../shared/components/movie-search/movie-search.component';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import { MovieSearchComponent } from '../shared/components/movie-search/movie-se
     MoviesListPageComponent,
     MoviesLayoutPageComponent,
     MovieCardComponent,
+    MovieSearchComponent,
     SafeUrlPipe,
-    MovieSearchComponent
   ],
   providers: [DatePipe],
 })

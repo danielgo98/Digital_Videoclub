@@ -8,7 +8,7 @@ import { SeriesRoutingModule } from './series-routing.module';
 import { SeriesLayoutPageComponent } from './pages/series-layout-page/series-layout-page.component';
 import { SerieCardComponent } from './components/serie-card/serie-card.component';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
-import { SerieSearchComponent } from '../shared/components/serie-search/serie-search.component';
+import { SerieSearchComponent } from './components/serie-search/serie-search.component';
 
 @NgModule({
   imports: [
@@ -22,8 +22,8 @@ import { SerieSearchComponent } from '../shared/components/serie-search/serie-se
     SeriePageComponent,
     SeriesListPageComponent,
     SerieCardComponent,
-    SafeUrlPipe,
     SerieSearchComponent,
+    SafeUrlPipe,
   ],
   providers: [DatePipe]
 })
