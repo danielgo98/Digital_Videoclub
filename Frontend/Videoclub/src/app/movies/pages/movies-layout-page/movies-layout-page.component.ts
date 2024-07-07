@@ -14,7 +14,6 @@ export class MoviesLayoutPageComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    console.log(this.userService.getUser());
     this.currentUser = this.userService.getUser();
   }
 
